@@ -1,1 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cake N Bake | Bakery</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #fff9f5;
+    color: #482b2b;
+}
+
+header {
+    background: white;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 10px #ddd;
+}
+
+.logo {
+    color: #873e50;
+    font-size: 27px;
+}
+
+.logo span {
+    color: #e58a9a;
+}
+
+nav a {
+    text-decoration: none;
+    color: #482b2b;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #e58a9a;
+}
+
+.hero {
+    min-height: 550px;
+    background: linear-gradient(#0006,#0006),
+    url("https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=1500")
+    center/cover;
+    display: flex;
+    align-items: center;
+    padding: 8%;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 19px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    background: #e58a9a;
+    color: white;
+    padding: 14px 25px;
+    text-decoration: none;
+    border-radius: 30px;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+}
+
+section {
+    padding: 70px 7%;
+    text-align: center;
+}
+
+h2 {
+    font-size: 34px;
+    color: #873e50;
+    margin-bottom: 25px;
+}
+
+.about p {
+    max-width: 750px;
+    margin: auto;
+    line-height: 1.8;
+}
+
+.products {
+    background: #fff0ed;
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 22px;
+}
+
+.product {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    padding-bottom: 20px;
+    box-shadow: 0 4px 12px #ddd;
+    transition: .3s;
+}
+
+.product:hover {
+    transform: translateY(-7px);
+}
+
+.product img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product h3 {
+    margin: 15px 5px;
+}
+
+.product p {
+    color: #777;
+    font-size: 14px;
+}
+
+.price {
+    color: #d36c80;
+    font-size: 20px;
+    margin: 15px;
+}
+
+button {
+    background: #873e50;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #e58a9a;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+.feature {
+    padding: 25px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px #ddd;
+}
+
+.feature h3 {
+    margin: 12px;
+}
+
+.contact {
+    background: #fff0ed;
+}
+
+form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, textarea {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+textarea {
+    height: 120px;
+}
+
+footer {
+    background: #482b2b;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    line-height: 2;
+}
+
+@media(max-width: 850px) {
+    .product-container {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media(max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 5px;
+        font-size: 13px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .product-container,
+    .features {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h2 class="logo">Cake <span>N</span> Bake 🎂</h2>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#products">Menu</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <div>
+        <h1>Sweet Moments,<br>Beautiful Memories!</h1>
+        <p>Freshly baked cakes, cupcakes and delicious pastries.</p>
+        <a href="#products" class="btn">Explore Cakes</a>
+    </div>
+</section>
+
+<section class="about" id="about">
+    <h2>Welcome to Cake N Bake</h2>
+    <p>
+        We make every celebration special with delicious,
+        freshly baked cakes and sweet treats.
+        Our bakery brings you quality, freshness and
+        happiness in every bite.
+    </p>
+</section>
+
+<section class="products" id="products">
+    <h2>Our Delicious Cakes</h2>
+    <p>Choose your favourite sweet treat!</p>
+
+    <br>
+
+    <div class="product-container">
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600">
+            <h3>Chocolate Cake</h3>
+            <p>Rich chocolate flavour</p>
+            <h4 class="price">Rs. 2,000</h4>
+            <button onclick="order('Chocolate Cake')">Order Now</button>
+        </div>
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=600">
+            <h3>Strawberry Cake</h3>
+            <p>Fresh strawberry cream</p>
+            <h4 class="price">Rs. 2,500</h4>
+            <button onclick="order('Strawberry Cake')">Order Now</button>
+        </div>
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1519869325930-281384150729?w=600">
+            <h3>Cupcakes</h3>
+            <p>Soft and creamy cupcakes</p>
+            <h4 class="price">Rs. 500</h4>
+            <button onclick="order('Cupcakes')">Order Now</button>
+        </div>
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=600">
+            <h3>Fresh Pastries</h3>
+            <p>Delicious bakery treats</p>
+            <h4 class="price">Rs. 350</h4>
+            <button onclick="order('Fresh Pastries')">Order Now</button>
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <h2>Why Choose Us?</h2>
+
+    <div class="features">
+        <div class="feature">
+            <h1>🎂</h1>
+            <h3>Freshly Baked</h3>
+            <p>Fresh products every day.</p>
+        </div>
+
+        <div class="feature">
+            <h1>❤️</h1>
+            <h3>Made With Love</h3>
+            <p>Quality ingredients and care.</p>
+        </div>
+
+        <div class="feature">
+            <h1>🚚</h1>
+            <h3>Fast Delivery</h3>
+            <p>Sweetness at your doorstep.</p>
+        </div>
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <p>Send us your message!</p>
+
+    <br>
+
+    <form id="contactForm">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <textarea id="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    <h2 style="color:white">Cake N Bake 🎂</h2>
+    <p>Making Every Celebration Sweeter!</p>
+    <p>© 2026 Cake N Bake. All Rights Reserved.</p>
+</footer>
+
+<script>
+function order(product) {
+    let phone = "923001234567";
+
+    let message = "Hello Cake N Bake! I want to order " + product;
+
+    let url = "https://wa.me/" + phone +
+              "?text=" + encodeURIComponent(message);
+
+    window.open(url, "_blank");
+}
+
+document.getElementById("contactForm")
+.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let name = document.getElementById("name").value;
+
+    alert("Thank you " + name + "! Your message has been received.");
+
+    this.reset();
+});
+</script>
+
+</body>
+</html>
 
